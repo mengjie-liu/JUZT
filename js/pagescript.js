@@ -1,23 +1,31 @@
-function scrollHorizontally(e) {
-  e = window.event || e;
-  var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-  var scrollSpeed = 30;
-  document.documentElement.scrollLeft -= delta * scrollSpeed;
-  document.body.scrollLeft -= delta * scrollSpeed;
-  //   e.preventDefault();
+// function scrollHorizontally(e) {
+//   e = window.event || e;
+//   var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+//   var scrollSpeed = 30;
+//   document.documentElement.scrollLeft -= delta * scrollSpeed;
+//   document.body.scrollLeft -= delta * scrollSpeed;
+//   //   e.preventDefault();
+// }
+// if (window.addEventListener) {
+//   // IE9, Chrome, Safari, Opera
+//   window.addEventListener("mousewheel", scrollHorizontally, false);
+//   // Firefox
+//   window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+// } else {
+//   // IE 6/7/8
+//   window.attachEvent("onmousewheel", scrollHorizontally);
+// }
+
+let productOverviewImg = document.querySelector(".productOverviewImg");
+// console.log(productOverviewImg);
+if (productOverviewImg) {
+  productOverviewImg.addEventListener("cllick", function () {
+    console.log(productOverviewImg);
+    location.href = "./product.html";
+  });
 }
 
-if (window.addEventListener) {
-  // IE9, Chrome, Safari, Opera
-  window.addEventListener("mousewheel", scrollHorizontally, false);
-  // Firefox
-  window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-} else {
-  // IE 6/7/8
-  window.attachEvent("onmousewheel", scrollHorizontally);
-}
-
-let addToCart = document.querySelector(".addToCart");
+let addToCart = document.querySelector(".addd");
 let smallCart = document.querySelector(".cart");
 if (addToCart) {
   addToCart.addEventListener("click", function (e) {
