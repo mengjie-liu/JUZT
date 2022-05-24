@@ -57,3 +57,42 @@ class JUZTHeader extends HTMLElement {
   }
 }
 customElements.define("juzt-header", JUZTHeader);
+
+class JUZTFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+  <div class="tickerwrapper">
+    <ul class="list">
+      <li class="listitem">
+        <span class="text"
+          >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.</span
+        >
+      </li>
+      <li class="listitem">
+        <span class="text"
+          >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.</span
+        >
+      </li>
+      <li class="listitem">
+        <span class="text"
+          >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.</span
+        >
+      </li>
+      <li class="listitem">
+        <span class="text"
+          >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.</span
+        >
+      </li>
+    </ul>
+  </div>`;
+  }
+}
+customElements.define("juzt-footer", JUZTFooter);

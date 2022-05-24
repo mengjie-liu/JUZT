@@ -357,7 +357,7 @@ div::after {
   }
   
   body{
-    background:#CCC;
+    background-color: rgba(211, 211, 211, 0.55);
   }
   
   .tickerwrapper {
