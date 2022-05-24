@@ -3,6 +3,29 @@
     padding: 0;
 }
 
+@media only screen and (min-width: 1800px) {
+    body{
+        font-size: 20pt;
+    }
+  }
+@media only screen and (min-width:1280px) and (max-width: 1800px) {
+    body{
+        font-size: 12pt;
+    }
+  }
+@media only screen and (min-width:600px) and (max-width: 1280px) {
+    body{
+        font-size: 12pt;
+    }
+  }
+@media only screen and (max-width:600px) {
+    body{
+        font-size: 12pt;
+        /* width:100%;
+        overflow-x: hidden; */
+    }
+  }
+
 body{
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
@@ -78,7 +101,7 @@ a{
 .title{
 font-family: ff-good-web-pro-condensed;
 font-weight: 600;
-font-size: 18pt;
+font-size: 1.5em;
 text-transform:uppercase;
 line-height: 1.35;
 letter-spacing: 0.5px;
@@ -88,7 +111,7 @@ z-index: 1002;
 .text{
 font-family: ff-good-web-pro;
 font-weight: 400;
-font-size: 12pt;
+font-size: 1em;
 line-height: 1.35;
 letter-spacing: 0.5px;
 }
@@ -110,11 +133,11 @@ letter-spacing: 0.5px;
 .cross::after {
     position: absolute;
     content: '';
-    width: 18pt;
+    width: 1.5em;
     height: 1px; /* cross thickness */
     background-color: black;
-    margin-top: 9pt;
-    margin-left: -18pt;
+    margin-top: 0.75em;
+    margin-left: -1.5em;
 }
 
 div::after {
@@ -255,8 +278,8 @@ div::after {
     width: 39.04vw;
     object-fit: contain;
     /* z-index: -2; */
-    margin-top: 9pt;
-    margin-left: -9pt;
+    margin-top: 0.75em;
+    margin-left: -0.75em;
     max-height: 19.52vw;
 }
 .productOverview a img:hover{
@@ -304,8 +327,8 @@ div::after {
     height: calc(19.52vw + 100vh - 39.04vw - 0.8em);
     object-fit: cover;
     /* z-index: -2; */
-    margin-top: 9pt;
-    margin-left: -9pt;
+    margin-top: 0.75em;
+    margin-left: -0.75em;
     overflow: hidden;
 }
 .productDetail img{
@@ -342,7 +365,7 @@ div::after {
 .cart{
     position: fixed;
     margin-left: 1.73em;
-    margin-top: 9pt;
+    margin-top: 0.75em;
     left: 78.08vw;
     top: 19.52vw;
     z-index: 1010;
@@ -372,9 +395,9 @@ div::after {
     width: 19.52vw;
     /* padding-top: 2.1em; */
     padding-top: 2.75em;
-    margin-top: -9pt;
+    margin-top: -0.75em;
     min-height: 39.04vw;
-    padding-right: -9pt;
+    padding-right: -0.75em;
     position: absolute;
     overflow-x: hidden;
     top: 0;
@@ -445,7 +468,7 @@ div::after {
 
 .productCartItem{
     padding-top: 2.75em;
-    padding-right: -9pt;
+    padding-right: -0.75em;
     position: relative;
 }
 .productCart{
@@ -459,8 +482,8 @@ div::after {
     width: 100%;
     object-fit: cover;
     /* z-index: -2; */
-    margin-top: 9pt;
-    margin-left: -9pt;
+    margin-top: 0.75em;
+    margin-left: -0.75em;
 }
 .checkOutDetail{
     text-transform: capitalize;
@@ -520,7 +543,7 @@ div::after {
     background:black;
     color:white;
     width: 100%;
-    height: 30px;
+    height: 1.7em;
     overflow: hidden;
     cursor: default;
     z-index: 2000;
@@ -532,17 +555,17 @@ div::after {
     list-style: none;
     padding:0;
     margin:0;
-    padding-top: 5px;
+    padding-top: 0.35em;
   }
   
   ul.list.cloned {
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 5px;
+    padding-top: 0.35em;
   }
   
   ul.list li {
     float: left;
-    padding-left: 20px;
+    padding-left: 1.5em;
   }

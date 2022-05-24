@@ -1,3 +1,26 @@
+@media only screen and (min-width: 1800px) {
+    body{
+        font-size: 20pt;
+    }
+  }
+@media only screen and (min-width:1280px) and (max-width: 1800px) {
+    body{
+        font-size: 12pt;
+    }
+  }
+@media only screen and (min-width:600px) and (max-width: 1280px) {
+    body{
+        font-size: 12pt;
+    }
+  }
+@media only screen and (max-width:600px) {
+    body{
+        font-size: 12pt;
+        /* width:100%;
+        overflow-x: hidden; */
+    }
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -40,7 +63,7 @@ a{
 .title{
 font-family: ff-good-web-pro-condensed;
 font-weight: 600;
-font-size: 18pt;
+font-size: 1.5em;
 text-transform:uppercase;
 line-height: 1.35;
 letter-spacing: 0.25px;
@@ -50,7 +73,7 @@ z-index: 1002;
 .text{
 font-family: ff-good-web-pro;
 font-weight: 400;
-font-size: 12pt;
+font-size: 1em;
 line-height: 1.35;
 letter-spacing: 0.5px;
 }
@@ -74,11 +97,11 @@ letter-spacing: 0.5px;
     position: absolute;
     /* transform: translate(-50%,-50%); */
     content: '';
-    width: 18pt;
+    width: 1.5em;
     height: 1px; /* cross thickness */
     background-color: black;
-    margin-top: 9pt;
-    margin-left: -18pt;
+    margin-top: 0.75em;
+    margin-left: -1.5em;
 }
 
 .green{
@@ -89,11 +112,11 @@ letter-spacing: 0.5px;
     position: absolute;
     /* transform: translate(-50%,-50%); */
     content: '';
-    width: 18pt;
+    width: 1.5em;
     height: 1px; /* cross thickness */
     background-color: lime;
-    margin-top: 9pt;
-    margin-left: -18pt;
+    margin-top: 0.75em;
+    margin-left: -1.5em;
 }
 .red{
     color: red;
@@ -103,11 +126,11 @@ letter-spacing: 0.5px;
     position: absolute;
     /* transform: translate(-50%,-50%); */
     content: '';
-    width: 18pt;
+    width: 1.5em;
     height: 1px; /* cross thickness */
     background-color: red;
-    margin-top: 9pt;
-    margin-left: -18pt;
+    margin-top: 0.75em;
+    margin-left: -1.5em;
 }
 .pink{
     color: magenta;
@@ -117,11 +140,11 @@ letter-spacing: 0.5px;
     position: absolute;
     /* transform: translate(-50%,-50%); */
     content: '';
-    width: 18pt;
+    width: 1.5em;
     height: 1px; /* cross thickness */
     background-color: magenta;
-    margin-top: 9pt;
-    margin-left: -18pt;
+    margin-top: 0.75em;
+    margin-left: -1.5em;
 }
 .blue{
     color: blue;
@@ -131,11 +154,11 @@ letter-spacing: 0.5px;
     position: absolute;
     /* transform: translate(-50%,-50%); */
     content: '';
-    width: 18pt;
+    width: 1.5em;
     height: 1px; /* cross thickness */
     background-color: blue;
-    margin-top: 9pt;
-    margin-left: -18pt;
+    margin-top: 0.75em;
+    margin-left: -1.5em;
 }
 
 div::after {
