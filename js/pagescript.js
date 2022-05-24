@@ -70,6 +70,30 @@ mins.forEach(function (min) {
   });
 });
 
+let ifHow = true;
+let howToUse = document.querySelector(".howToUse");
+let howContent = document.querySelector(".howTo");
+// let productDesContainer = document.querySelector(".productDesContainer");
+if (howToUse) {
+  howToUse.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (ifHow == true) {
+      howToUse.innerHTML = `
+    close
+    `;
+      howContent.style.display = "block";
+      ifHow = false;
+    } else {
+      console.log("!!");
+      howToUse.innerHTML = `
+    how to use
+    `;
+      howContent.style.display = "none";
+      ifHow = true;
+    }
+  });
+}
+
 $(document).ready(function () {
   var $tickerWrapper = $(".tickerwrapper");
   var $list = $tickerWrapper.find("ul.list");

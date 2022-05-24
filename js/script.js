@@ -27,7 +27,7 @@ document.addEventListener("click", function (e) {
   grass.classList.add("title");
   grass.classList.add("grass");
   document.querySelector("body").append(grass);
-  console.log("mouse location:", e.clientX, e.clientY);
+  // console.log("mouse location:", e.clientX, e.clientY);
 });
 
 let namediv = document.querySelector(".sayHi");

@@ -343,6 +343,9 @@ div::after {
     position: absolute;
     height:35.95vw;
 } */
+.howTo{
+    display: none;
+}
 .productAdd{
     position: fixed;
     left: 19.52vw;
