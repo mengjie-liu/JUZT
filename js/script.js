@@ -120,76 +120,76 @@ function checkTime(i) {
 }
 startTime();
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  let colorContainer = document.querySelector(".color");
-  colorContainer.addEventListener("mouseenter", function () {
-    this.style.transition = "0s";
-    this.style.transitionDelay = "0s";
-    this.style.opacity = 1;
-  });
-  let cross = document.querySelectorAll(".cross");
-  let green = document.querySelector("#green");
-  let red = document.querySelector("#red");
-  let pink = document.querySelector("#pink");
-  let blue = document.querySelector("#blue");
-  let black = document.querySelector("#black");
-  let links = document.querySelectorAll(".hoverEffect");
-  green.addEventListener("click", function () {
-    cross.forEach(function (x) {
-      x.removeAttribute("class");
-      x.classList.add("green");
-    });
-    document.body.style.color = "lime";
-    links.forEach(function (link) {
-      console.log(link);
-      link.style.color = "lime";
-    });
-  });
-  red.addEventListener("click", function () {
-    cross.forEach(function (x) {
-      x.removeAttribute("class");
-      x.classList.add("red");
-    });
-    document.body.style.color = "red";
-    links.forEach(function (link) {
-      console.log(link);
-      link.style.color = "red";
-    });
-  });
-  pink.addEventListener("click", function () {
-    cross.forEach(function (x) {
-      x.removeAttribute("class");
-      x.classList.add("pink");
-    });
-    document.body.style.color = "magenta";
-    links.forEach(function (link) {
-      console.log(link);
-      link.style.color = "magenta";
-    });
-  });
-  blue.addEventListener("click", function () {
-    cross.forEach(function (x) {
-      x.removeAttribute("class");
-      x.classList.add("blue");
-    });
-    document.body.style.color = "blue";
-    links.forEach(function (link) {
-      console.log(link);
-      link.style.color = "blue";
-    });
-  });
-  black.addEventListener("click", function () {
-    cross.forEach(function (x) {
-      x.removeAttribute("class");
-      x.classList.add("cross");
-    });
-    document.body.style.color = "black";
-    links.forEach(function (link) {
-      console.log(link);
-      link.style.color = "black";
-    });
-  });
-});
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   let colorContainer = document.querySelector(".color");
+//   colorContainer.addEventListener("mouseenter", function () {
+//     this.style.transition = "0s";
+//     this.style.transitionDelay = "0s";
+//     this.style.opacity = 1;
+//   });
+//   let cross = document.querySelectorAll(".cross");
+//   let green = document.querySelector("#green");
+//   let red = document.querySelector("#red");
+//   let pink = document.querySelector("#pink");
+//   let blue = document.querySelector("#blue");
+//   let black = document.querySelector("#black");
+//   let links = document.querySelectorAll(".hoverEffect");
+//   green.addEventListener("click", function () {
+//     cross.forEach(function (x) {
+//       x.removeAttribute("class");
+//       x.classList.add("green");
+//     });
+//     document.body.style.color = "lime";
+//     links.forEach(function (link) {
+//       console.log(link);
+//       link.style.color = "lime";
+//     });
+//   });
+//   red.addEventListener("click", function () {
+//     cross.forEach(function (x) {
+//       x.removeAttribute("class");
+//       x.classList.add("red");
+//     });
+//     document.body.style.color = "red";
+//     links.forEach(function (link) {
+//       console.log(link);
+//       link.style.color = "red";
+//     });
+//   });
+//   pink.addEventListener("click", function () {
+//     cross.forEach(function (x) {
+//       x.removeAttribute("class");
+//       x.classList.add("pink");
+//     });
+//     document.body.style.color = "magenta";
+//     links.forEach(function (link) {
+//       console.log(link);
+//       link.style.color = "magenta";
+//     });
+//   });
+//   blue.addEventListener("click", function () {
+//     cross.forEach(function (x) {
+//       x.removeAttribute("class");
+//       x.classList.add("blue");
+//     });
+//     document.body.style.color = "blue";
+//     links.forEach(function (link) {
+//       console.log(link);
+//       link.style.color = "blue";
+//     });
+//   });
+//   black.addEventListener("click", function () {
+//     cross.forEach(function (x) {
+//       x.removeAttribute("class");
+//       x.classList.add("cross");
+//     });
+//     document.body.style.color = "black";
+//     links.forEach(function (link) {
+//       console.log(link);
+//       link.style.color = "black";
+//     });
+//   });
+// });
 
 $(document).ready(function () {
   var $tickerWrapper = $(".tickerwrapper");
