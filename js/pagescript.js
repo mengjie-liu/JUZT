@@ -43,7 +43,7 @@ let removes = document.querySelectorAll(".remove");
 removes.forEach(function (remove) {
   remove.addEventListener("click", function (e) {
     e.preventDefault();
-    this.parentElement.parentElement.parentElement.remove();
+    this.parentElement.parentElement.parentElement.style.display = "none";
   });
 });
 

@@ -56,7 +56,7 @@ videos.forEach(function (vd) {
   });
   vd.addEventListener("mouseleave", function () {
     this.style.transition = "1s";
-    this.style.transitionDelay = "2s";
+    this.style.transitionDelay = "0.25s";
     this.style.opacity = 0;
   });
 });
@@ -70,30 +70,30 @@ images.forEach(function (img) {
   });
   img.addEventListener("mouseleave", function () {
     this.style.transition = "1s";
-    this.style.transitionDelay = "2s";
+    this.style.transitionDelay = "0.25s";
     this.style.opacity = 0;
   });
 });
 
-let i = 1;
-let button = document.querySelector(".button");
-button.addEventListener("mouseenter", function () {
-  this.style.transition = "0s";
-  this.style.transitionDelay = "0s";
-  this.style.opacity = 1;
-});
-// button.addEventListener("mouseleave", function () {
-//   this.style.transition = "1s";
-//   this.style.transitionDelay = "2s";
-//   this.style.opacity = 0;
+// let i = 1;
+// let button = document.querySelector(".button");
+// button.addEventListener("mouseenter", function () {
+//   this.style.transition = "0s";
+//   this.style.transitionDelay = "0s";
+//   this.style.opacity = 1;
 // });
-let buttonclick = document.querySelector("#click");
-buttonclick.addEventListener("click", function (e) {
-  e.preventDefault();
-  let numtxt = document.querySelector("#clicknum");
-  numtxt.innerHTML = "clicked ✕ " + i;
-  i++;
-});
+// // button.addEventListener("mouseleave", function () {
+// //   this.style.transition = "1s";
+// //   this.style.transitionDelay = "2s";
+// //   this.style.opacity = 0;
+// // });
+// let buttonclick = document.querySelector("#click");
+// buttonclick.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   let numtxt = document.querySelector("#clicknum");
+//   numtxt.innerHTML = "clicked ✕ " + i;
+//   i++;
+// });
 
 let clockContainer = document.querySelector(".clock");
 let clock = document.querySelector("#clock");
@@ -109,7 +109,7 @@ function startTime() {
   let s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  clock.innerHTML = h + ":" + m + ":" + s;
+  clock.innerHTML = h + ":&nbsp;" + m + ":&nbsp;" + s;
   setTimeout(startTime, 1000);
 }
 function checkTime(i) {
