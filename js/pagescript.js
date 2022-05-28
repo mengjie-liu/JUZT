@@ -16,26 +16,21 @@
 //   window.attachEvent("onmousewheel", scrollHorizontally);
 // }
 
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   let gridWrap = document.querySelector(".gridWrap");
+//   // gridWrap.transition = "1s";
+//   document.addEventListener("mousemove", function () {
+//     gridWrap.style.opacity = 1;
+//   });
+//   gridWrap.style.opacity = 0;
+// });
+
 let productOverviewImg = document.querySelector(".productOverviewImg");
 // console.log(productOverviewImg);
 if (productOverviewImg) {
   productOverviewImg.addEventListener("cllick", function () {
     console.log(productOverviewImg);
     location.href = "./product.html";
-  });
-}
-
-let addToCart = document.querySelector(".addd");
-let smallCart = document.querySelector(".cart");
-if (addToCart) {
-  addToCart.addEventListener("click", function (e) {
-    e.preventDefault();
-    smallCart.style.display = "block";
-    let close = document.querySelector(".close");
-    close.addEventListener("click", function (e) {
-      e.preventDefault();
-      smallCart.style.display = "none";
-    });
   });
 }
 
@@ -71,6 +66,7 @@ mins.forEach(function (min) {
 });
 
 let ifHow = true;
+let productDesContainer = document.querySelector(".productDesContainer");
 let howToUse = document.querySelector(".howToUse");
 let howContent = document.querySelector(".howTo");
 // let productDesContainer = document.querySelector(".productDesContainer");
@@ -78,13 +74,19 @@ if (howToUse) {
   howToUse.addEventListener("click", function (e) {
     e.preventDefault();
     if (ifHow == true) {
+      howToUse.style.marginBottom = "0";
       howToUse.innerHTML = `
     close
     `;
       howContent.style.display = "block";
+      productDesContainer.style.maxHeight =
+        "calc(24.5vw - " + howContent.offsetHeight + "px )";
+      console.log(howContent.offsetHeight);
       ifHow = false;
     } else {
-      console.log("!!");
+      howToUse.style.marginBottom = "1em";
+      // console.log("!!");
+      productDesContainer.style.maxHeight = "24.5vw";
       howToUse.innerHTML = `
     how to use
     `;
@@ -95,6 +97,61 @@ if (howToUse) {
 }
 
 $(document).ready(function () {
+  window.scrollTo(0, 0);
+
+  let idleTimer = null;
+  let idleState = false;
+
+  function showGrid(time) {
+    clearTimeout(idleTimer);
+    if (idleState == true) {
+      $(".gridWrap").removeClass("hidden");
+    }
+    idleState = false;
+    idleTimer = setTimeout(function () {
+      $(".gridWrap").addClass("hidden");
+      idleState = true;
+    }, time);
+  }
+
+  //   let addToCart = document.querySelector(".addd");
+  // let smallCart = document.querySelector(".cart");
+  // if (addToCart) {
+  //   addToCart.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     smallCart.style.display = "block";
+  //     let close = document.querySelector(".close");
+  //     close.addEventListener("click", function (e) {
+  //       e.preventDefault();
+  //       smallCart.style.display = "none";
+  //     });
+  //   });
+  // }
+
+  $(".addd").click(function (e) {
+    e.preventDefault();
+    $(".cart").fadeIn(800);
+    $(".close").click(function (e) {
+      e.preventDefault();
+      $(".cart").fadeOut(800);
+    });
+  });
+
+  showGrid(800);
+
+  $(window).mousemove(function () {
+    showGrid(800);
+  });
+  $(window).scroll(function () {
+    showGrid(800);
+  });
+  $(".about").scroll(function () {
+    showGrid(800);
+  });
+  $(".productDesContainer").scroll(function () {
+    showGrid(800);
+  });
+
   var $tickerWrapper = $(".tickerwrapper");
   var $list = $tickerWrapper.find("ul.list");
   var $clonedList = $list.clone();

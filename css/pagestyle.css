@@ -76,6 +76,10 @@ a{
     text-align: center;
 } */
 
+.hidden{
+    opacity: 0;
+}
+
 .highlight::after{
     position: absolute;
     padding-left: 0.8em;
@@ -131,6 +135,8 @@ letter-spacing: 0.5px;
         row-gap: 0;
     z-index: 1030;
     pointer-events:none;
+    /* opacity: 1; */
+    transition: opacity 0.8s;
 }
 
 .cross::before,
@@ -293,7 +299,8 @@ div::after {
 .productDesContainer{
     position: relative;
     overflow-y: scroll;
-    max-height: 26.5vw;
+    overflow-x: visible;
+    max-height: 24.5vw;
     width: 17vw;
     top: 0;
 }
@@ -338,8 +345,14 @@ div::after {
     position: absolute;
     height:35.95vw;
 } */
+.howToUse{
+    display: block;
+    width: fit-content;
+    margin-bottom: 1em;
+}
 .howTo{
     display: none;
+    margin-bottom: 1em;
 }
 .productAdd{
     position: fixed;
@@ -371,6 +384,7 @@ div::after {
     height: 39.04vw;
     background-color: white;
     display: none;
+    /* transition:0.8s; */
     /* border: solid 1pt black; */
     /* box-shadow:inset 0px 0px 0px 1.1px #f00; */
 }

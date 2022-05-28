@@ -192,6 +192,32 @@ startTime();
 // });
 
 $(document).ready(function () {
+  window.scrollTo(0, 0);
+
+  let idleTimer = null;
+  let idleState = false;
+
+  function showGrid(time) {
+    clearTimeout(idleTimer);
+    if (idleState == true) {
+      $(".gridWrap").removeClass("hidden");
+    }
+    idleState = false;
+    idleTimer = setTimeout(function () {
+      $(".gridWrap").addClass("hidden");
+      idleState = true;
+    }, time);
+  }
+
+  showGrid(800);
+
+  $(window).mousemove(function () {
+    showGrid(800);
+  });
+  $(window).scroll(function () {
+    showGrid(800);
+  });
+
   var $tickerWrapper = $(".tickerwrapper");
   var $list = $tickerWrapper.find("ul.list");
   var $clonedList = $list.clone();
