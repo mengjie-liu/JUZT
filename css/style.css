@@ -101,7 +101,7 @@ letter-spacing: 0.5px;
         z-index: 1030;
     pointer-events:none;
     transition: opacity 0.8s;
-
+top:0;
 }
 
 .cross::before,
@@ -121,7 +121,7 @@ letter-spacing: 0.5px;
     left: 0;
     top: 0;
     padding-left: 2.02em;
-    padding-top:1em;
+    padding-top:0.5em;
     width: calc(var(--unit) * 5);
     height: calc(var(--unit) * 3);
     object-fit: contain;

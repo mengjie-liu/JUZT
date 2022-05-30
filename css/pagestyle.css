@@ -161,6 +161,7 @@ letter-spacing: 0.5px;
     pointer-events:none;
     /* opacity: 1; */
     transition: opacity 0.8s;
+    top: 0;
 }
 
 .cross::before,
