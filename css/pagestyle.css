@@ -7,6 +7,16 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "al";
+    src: url("/asset/ApercuLight.otf");
+  }
+
+  @font-face {
+    font-family: "am";
+    src: url("/asset/ApercuMedium.otf");
+  }
+
 @media only screen and (min-width: 1800px) {
     body{
         font-size: 18pt;
@@ -106,7 +116,14 @@ a{
 
   .title{
     font-family: roc-grotesk,sans-serif;
+    /* font-family: am; */
     font-weight: 500;
+    /* font-family: urw-din, sans-serif;
+font-weight: 600; */
+/* font-family: dinosaur, sans-serif;
+font-weight: 500; */
+/* font-family: din-2014, sans-serif;
+font-weight: 600; */
     font-style: normal;
 font-size: 1.3em;
 text-transform:uppercase;
@@ -117,6 +134,13 @@ z-index: 1002;
 
 .text{
     font-family: roc-grotesk,sans-serif;
+    /* font-family: al; */
+    /* font-family: urw-din, sans-serif;
+font-weight: 400; */
+/* font-family: dinosaur, sans-serif;
+font-weight: 400; */
+/* font-family: din-2014, sans-serif;
+font-weight: 400; */
     font-weight: 300;
     font-style: normal;
 font-size: 1em;
@@ -580,14 +604,14 @@ div::after {
     list-style: none;
     padding:0;
     margin:0;
-    padding-top: 0.35em;
+    padding-top: 0.325em;
   }
   
   ul.list.cloned {
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 0.35em;
+    padding-top: 0.325em;
   }
   
   ul.list li {

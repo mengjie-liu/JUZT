@@ -59,7 +59,14 @@ mins.forEach(function (min) {
     if (num > 1) {
       num--;
     } else if (num == 1) {
-      this.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
+      // let item = this.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
+      let item =
+        this.parentElement.parentElement.parentElement.parentElement
+          .parentElement;
+      if (item != document.querySelector("body")) {
+        item.remove();
+      }
+      console.log(item);
     }
     this.parentElement.previousElementSibling.innerHTML = num;
   });
@@ -97,6 +104,8 @@ if (howToUse) {
 }
 
 $(document).ready(function () {
+  console.log(window.location.href);
+
   window.scrollTo(0, 0);
 
   let idleTimer = null;

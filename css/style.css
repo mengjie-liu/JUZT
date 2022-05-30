@@ -422,7 +422,7 @@ div::after {
     background:black;
     color:white;
     width: 100%;
-    height: 30px;
+    height: 1.7em;
     overflow: hidden;
     cursor: default;
     z-index: 2000;
@@ -434,17 +434,17 @@ div::after {
     list-style: none;
     padding:0;
     margin:0;
-    padding-top: 5px;
+    padding-top: 0.325em;
   }
   
   ul.list.cloned {
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 5px;
+    padding-top: 0.325em;
   }
   
   ul.list li {
     float: left;
-    padding-left: 20px;
+    padding-left: 1.5em;
   }
