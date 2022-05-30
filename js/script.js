@@ -16,6 +16,14 @@
 //   window.attachEvent("onmousewheel", scrollHorizontally);
 // }
 
+let policyEtcs = document.querySelectorAll(".policyEtc a");
+policyEtcs.forEach(function (policyEtc) {
+  policyEtc.addEventListener("click", function (e) {
+    e.preventDefault();
+  });
+});
+console.log(policyEtcs);
+
 document.addEventListener("click", function (e) {
   let grass = document.createElement("div");
   grass.innerHTML = `
@@ -107,6 +115,7 @@ function startTime() {
   let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
+  h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
   clock.innerHTML = h + ":&nbsp;" + m + ":&nbsp;" + s;

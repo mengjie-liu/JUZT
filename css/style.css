@@ -58,15 +58,17 @@ a{
     border-radius: 100%;
     content:'';
     left: 50%;
-    top: 45%;
+    top: 50%;
     transform: translate(-50%,-50%);
     border: 1pt solid black;
     text-align: center;
 }
 
 .title{
-    font-family: roc-grotesk,sans-serif;
-    font-weight: 500;
+    /* font-family: roc-grotesk,sans-serif;
+    font-weight: 500; */
+    font-family: din-2014, sans-serif;
+font-weight: 600;
     font-style: normal;
 font-size: 1.3em;
 text-transform:uppercase;
@@ -76,8 +78,10 @@ z-index: 1002;
 }
 
 .text{
-    font-family: roc-grotesk,sans-serif;
-    font-weight: 300;
+    /* font-family: roc-grotesk,sans-serif;
+    font-weight: 300; */
+    font-family: din-2014, sans-serif;
+font-weight: 400;
     font-style: normal;
 font-size: 1em;
 line-height: 1.35;
@@ -117,7 +121,7 @@ letter-spacing: 0.5px;
     left: 0;
     top: 0;
     padding-left: 2.02em;
-    padding-top:0.5em;
+    padding-top:1em;
     width: calc(var(--unit) * 5);
     height: calc(var(--unit) * 3);
     object-fit: contain;
@@ -389,7 +393,7 @@ div::after {
 #img2{
     left: calc(var(--unit) * 2);
     top: calc(var(--unit) * 10);
-    height: calc(100vh - 39.04vw - 0.5em);
+    /* height: calc(100vh - 39.04vw - 0.5em); */
 }
 #img3{
     left: calc(var(--unit) * 1);
@@ -448,3 +452,38 @@ div::after {
     float: left;
     padding-left: 1.5em;
   }
+
+.policyEtc{
+    position: relative;
+    /* left: 2.52em; */
+    margin-left: -0.5em;
+    margin-top: 0.5em;
+    box-sizing: border-box;
+    top: calc(var(--unit) * 11);
+    left: 0;
+    height: calc(100vh - 39.04vw - 0.5em);    /* width: var(--unit);
+    height: var(--unit); */
+}
+.sr{
+    position: absolute;
+    left: calc(var(--unit) + 1.5em);
+    bottom:2.75em;
+    cursor: pointer;
+    /* padding-left:1em; */
+}
+.pp{
+    position: absolute;
+    left: calc(var(--unit) * 2 + 1.5em); 
+    bottom:2.75em;
+    cursor: pointer;
+    /* padding-left:1em; */
+ 
+}
+.tc{
+    position: absolute;
+    left: calc(var(--unit) * 3 + 1.5em); 
+    bottom:2.75em;
+    cursor: pointer;
+    /* padding-left:1em; */
+ 
+}
