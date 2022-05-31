@@ -34,6 +34,27 @@ if (productOverviewImg) {
   });
 }
 
+let coming = document.querySelector(".coming");
+let productContainer = document.querySelector(".productContainer");
+let otherSeries = document.querySelector("#other a");
+let juztdrink = document.querySelector("#juztdrink a");
+if (coming) {
+  otherSeries.addEventListener("click", function (e) {
+    e.preventDefault();
+    productContainer.classList.add("hidden");
+    juztdrink.classList.remove("highlight");
+    coming.classList.remove("hidden");
+    otherSeries.classList.add("highlight");
+  });
+  juztdrink.addEventListener("click", function (e) {
+    e.preventDefault();
+    productContainer.classList.remove("hidden");
+    juztdrink.classList.add("highlight");
+    coming.classList.add("hidden");
+    otherSeries.classList.remove("highlight");
+  });
+}
+
 let removes = document.querySelectorAll(".remove");
 removes.forEach(function (remove) {
   remove.addEventListener("click", function (e) {

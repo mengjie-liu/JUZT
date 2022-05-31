@@ -311,6 +311,11 @@ div::after {
     left: 0;
     top: 2.75em;
 }
+.coming{
+    position: absolute;
+    top: 2.25em;
+    left: calc(2.75em + var(--unit) * 2);
+}
 
 .productPageDes{
     position: fixed;
