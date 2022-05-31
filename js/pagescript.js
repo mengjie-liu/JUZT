@@ -160,10 +160,10 @@ $(document).ready(function () {
 
   $(".addd").click(function (e) {
     e.preventDefault();
-    $(".cart").fadeIn(800);
+    $(".cart").fadeIn(500);
     $(".close").click(function (e) {
       e.preventDefault();
-      $(".cart").fadeOut(800);
+      $(".cart").fadeOut(500);
     });
   });
 
