@@ -22,7 +22,7 @@ policyEtcs.forEach(function (policyEtc) {
     e.preventDefault();
   });
 });
-console.log(policyEtcs);
+// console.log(policyEtcs);
 
 document.addEventListener("click", function (e) {
   let grass = document.createElement("div");
@@ -35,7 +35,10 @@ document.addEventListener("click", function (e) {
   grass.classList.add("title");
   grass.classList.add("grass");
   document.querySelector("body").append(grass);
-  // console.log("mouse location:", e.clientX, e.clientY);
+  let grasses = $(".grass");
+  if (grasses.length > 10) {
+    grasses[0].remove();
+  }
 });
 
 let namediv = document.querySelector(".sayHi");
