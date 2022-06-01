@@ -141,7 +141,7 @@ font-weight: 400; */
 font-weight: 400; */
 font-family: din-2014, sans-serif;
 font-weight: 400;
-    font-weight: 300;
+    /* font-weight: 300; */
     font-style: normal;
 font-size: 1em;
 line-height: 1.35;
@@ -200,6 +200,7 @@ div::after {
     .logo{
         position: fixed;
         left: 2.52em;
+        top:0;
         max-width: 12vw;
         z-index: 1010;
     }
@@ -213,6 +214,7 @@ div::after {
     .nav{
         position: fixed;
         left:2.52em;
+        top:0;
         margin-left: calc(var(--unit) * 4);
         z-index: 1000;
     }

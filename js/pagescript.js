@@ -125,8 +125,6 @@ if (howToUse) {
 }
 
 $(document).ready(function () {
-  console.log(window.location.href);
-
   window.scrollTo(0, 0);
 
   let idleTimer = null;
