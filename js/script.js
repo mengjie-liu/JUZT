@@ -35,10 +35,8 @@ document.addEventListener("click", function (e) {
   grass.classList.add("title");
   grass.classList.add("grass");
   document.querySelector("body").append(grass);
-  let grasses = $(".grass");
-  if (grasses.length > 10) {
-    grasses[0].remove();
-  }
+  // let grasses = $(".grass");
+  $(".grass").delay(800).fadeOut(1000);
 });
 
 let namediv = document.querySelector(".sayHi");

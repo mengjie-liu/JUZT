@@ -124,7 +124,7 @@ top:0;
     padding-top:0.5em;
     width: calc(var(--unit) * 5);
     height: calc(var(--unit) * 3);
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -372,14 +372,21 @@ div::after {
     width: 100%;
     height: 100%;
 }
-.imgContainer img,.imgContainer img{
+.imgContainer img{
     position: absolute;
     width: 39.04vw;
     height: 100%;
     object-fit: cover;
     z-index: -2;
 }
-.videoContainer video, .videoContainer video{
+.videoContainer video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.videoContainer img{
     position: absolute;
     width: 100%;
     height: 100%;

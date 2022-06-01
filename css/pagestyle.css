@@ -250,7 +250,6 @@ div::after {
     position: relative;
     width: calc(var(--unit) * 2);
     height: calc(var(--unit) + 100vh - var(--unit) * 2);
-    /* overflow: hidden; */
 }
 .productItem{
     padding-top: 19.52vw;
@@ -279,7 +278,7 @@ div::after {
     position: relative;
     padding-left: 2.52em;
     padding-top: 0.5em;
-    left: 0;
+    left: var(--unit);
     list-style: none;
     display: flex;
     flex-direction:column;
@@ -295,14 +294,11 @@ div::after {
     position: absolute;
     width: calc(var(--unit) * 2);
     object-fit: contain;
-    /* z-index: -2; */
     margin-top: 0.5em;
     margin-left: -0.5em;
     max-height: 19.52vw;
 }
 .productOverview a img:hover{
-    /* border: solid 1pt black;
-    border-radius: 40pt; */
     background-color: white;
     cursor: pointer;
 }
@@ -319,7 +315,7 @@ div::after {
 
 .productPageDes{
     position: fixed;
-    left: calc(var(--unit) * 3 + 2.52em);
+    left: 2.52em;
     /* padding-left: 2.52em; */
     top: var(--unit);
     bottom: 0;
@@ -334,33 +330,23 @@ div::after {
     width: 17vw;
     top: 0;
 }
-.productDes{
-    /* overflow-y: scroll; */
-    /* max-height: 25.5vw; */
-}
+
 .productDesContainer::-webkit-scrollbar {
     display: none;
 }
 .productDetail{
-    /* margin-top: 0.5em; */
     margin-left: -0.5em;
 }
 .productD{
     position: relative;
     width: calc(var(--unit) * 3);
-    /* height: fit-content; */
     height: calc(var(--unit) + 100vh - var(--unit) * 2 - 0.5em);
 }
 .productDetail .imgContainer{
     position: calc(var(--unit) * 3);
-    /* background-color: white; */
     width: 58.56vw;
     height: calc(var(--unit) + 100vh - var(--unit) * 2 - 0.5em);
     object-fit: cover;
-    /* z-index: -2; */
-    /* margin-top: 0.5em; */
-    /* 
-    margin-left: -0.5em; */
     overflow: hidden;
 }
 .productDetail img{
@@ -371,10 +357,6 @@ div::after {
     left: 50%;
     transform: translate(-50%,-50%);
 ;}
-/* .productDetail:last-child>.productD,.productDetail:last-child>.productD>.imgContainer{
-    position: absolute;
-    height:35.95vw;
-} */
 .howToUse{
     display: block;
     width: fit-content;
@@ -414,9 +396,6 @@ div::after {
     height: 39.04vw;
     background-color: white;
     display: none;
-    /* transition:0.8s; */
-    /* border: solid 1pt black; */
-    /* box-shadow:inset 0px 0px 0px 1.1px #f00; */
 }
 .toCart{
     position: fixed;
@@ -512,7 +491,7 @@ div::after {
 .cartContainer{
     position: relative;
     padding-left: 2.52em;
-    left: 0;
+    left: var(--unit);
     list-style: none;
     display: flex;
     flex-direction: column;
