@@ -398,6 +398,7 @@ div::after {
     height: 39.04vw;
     background-color: white;
     display: none;
+    border: 1pt solid black;
 }
 .toCart{
     position: fixed;

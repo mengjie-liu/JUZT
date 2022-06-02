@@ -163,6 +163,7 @@ $(document).ready(function () {
       e.preventDefault();
       $(".cart").fadeOut(500);
     });
+    $(".cart").delay(3000).fadeOut(500);
   });
 
   showGrid(800);

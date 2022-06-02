@@ -123,7 +123,8 @@ top:0;
     padding-left: 2.02em;
     padding-top:0.5em;
     width: calc(var(--unit) * 5);
-    height: calc(var(--unit) * 3);
+    /* height: calc(var(--unit) * 3); */
+    height:calc(100vh - 0.5em);
     object-fit: cover;
     overflow: hidden;
 }
