@@ -391,10 +391,10 @@ div::after {
     position: fixed;
     margin-left: 2.05em;
     margin-top: 0.5em;
-    left: 78.08vw;
-    top: 19.52vw;
+    left: calc(var(--unit) * 4 - 0.5pt);
+    top: var(--unit);
     z-index: 1010;
-    width: 19.52vw;
+    width: calc(var(--unit) - 1.5pt);
     height: 39.04vw;
     background-color: white;
     display: none;
@@ -502,6 +502,10 @@ div::after {
     width: fit-content;
 }
 
+.productName{
+    /* position: absolute; */
+    z-index: 1000;
+}
 .productCartItem{
     padding-top: 2.75em;
     padding-right: -0.75em;
@@ -509,18 +513,23 @@ div::after {
 }
 .productCart{
     position: relative;
-    width: 19.52vw;
-    height: 19.52vw;
+    width: var(--unit);
+    height: var(--unit);
 
 }
-.productCart img{
+.productCart .productC>a{
     position: absolute;
-    width: 100%;
-    object-fit: cover;
+    width: var(--unit);
+    height: var(--unit);
     /* z-index: -2; */
     /* left:var(--unit); */
     margin-top: 0.5em;
     margin-left: -0.5em;
+}
+.productCart a img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
 }
 .checkOutDetail{
     text-transform: capitalize;
