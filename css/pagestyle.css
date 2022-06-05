@@ -328,7 +328,7 @@ div::after {
     position: relative;
     overflow-y: scroll;
     overflow-x: visible;
-    max-height: 24.5vw;
+    max-height: calc(24.5vw - 2em);
     width: 17vw;
     top: 0;
 }
@@ -362,10 +362,15 @@ div::after {
 .howToUse{
     display: block;
     width: fit-content;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 .howTo{
     display: none;
+    margin-bottom: 1em;
+}
+.detailImg{
+    display: block;
+    width: fit-content;
     margin-bottom: 1em;
 }
 .productAdd{

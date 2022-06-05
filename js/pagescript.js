@@ -96,6 +96,7 @@ mins.forEach(function (min) {
 let ifHow = true;
 let productDesContainer = document.querySelector(".productDesContainer");
 let howToUse = document.querySelector(".howToUse");
+let detailImg = document.querySelector(".detailImg");
 let howContent = document.querySelector(".howTo");
 // let productDesContainer = document.querySelector(".productDesContainer");
 if (howToUse) {
@@ -108,19 +109,33 @@ if (howToUse) {
     `;
       howContent.style.display = "block";
       productDesContainer.style.maxHeight =
-        "calc(24.5vw - " + howContent.offsetHeight + "px )";
+        "calc(24.5vw - " + howContent.offsetHeight + "px - 3em )";
       console.log(howContent.offsetHeight);
       ifHow = false;
     } else {
-      howToUse.style.marginBottom = "1em";
+      // howToUse.style.marginBottom = "1em";
       // console.log("!!");
-      productDesContainer.style.maxHeight = "24.5vw";
+      productDesContainer.style.maxHeight = "calc(24.5vw - 2em)";
       howToUse.innerHTML = `
     how to use
     `;
       howContent.style.display = "none";
       ifHow = true;
     }
+  });
+  detailImg.addEventListener("click", function (e) {
+    e.preventDefault();
+    // console.log(parseFloat($("body").css("font-size")));
+    window.open(
+      "detail.html",
+      "mywindow",
+      `menubar=1,resizable=1,width=${window.innerWidth * 0.1952 * 2},height=${
+        window.innerWidth * 0.1952 * 2
+      },left=${
+        parseFloat($("body").css("font-size")) * 2.02 +
+        window.innerWidth * 0.1952
+      },top=${parseFloat($("body").css("font-size")) * 7}`
+    );
   });
 }
 

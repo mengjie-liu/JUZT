@@ -417,6 +417,13 @@ div::after {
     height: calc(100vh - 39.04vw);    /* width: var(--unit);
     height: var(--unit); */
 }
+.cs{
+    position: absolute;
+    left: 1.5em;
+    bottom:2.75em;
+    cursor: pointer;
+    /* padding-left:1em; */
+}
 .sr{
     position: absolute;
     left: calc(var(--unit) + 1.5em);
@@ -435,6 +442,14 @@ div::after {
 .tc{
     position: absolute;
     left: calc(var(--unit) * 3 + 1.5em); 
+    bottom:2.75em;
+    cursor: pointer;
+    /* padding-left:1em; */
+ 
+}
+.sm{
+    position: absolute;
+    left: calc(var(--unit) * 4 + 1.5em); 
     bottom:2.75em;
     cursor: pointer;
     /* padding-left:1em; */
